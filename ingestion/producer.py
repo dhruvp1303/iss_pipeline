@@ -18,7 +18,7 @@ print("Producing ISS positions to Kafka. Ctrl+C to stop.\n")
 while True:
     try:
         # 1. Extract — fetch live position
-        resp = requests.get(URL, timeout=10)
+        resp = requests.get(URL, timeout=20)
         data = resp.json()
 
         # 2. Shape the message we care about
@@ -41,4 +41,4 @@ while True:
     except Exception as e:
         print(f"Failed: {e}  (retrying)")
 
-    time.sleep(5)
+    time.sleep(10)
