@@ -1,0 +1,10 @@
+name: iss_pipeline
+version: "1.0"
+profile: iss_pipeline
+
+model-paths: ["models"]
+
+models:
+  iss_pipeline:
+    silver:
+      +materialized: table
